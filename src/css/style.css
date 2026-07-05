@@ -234,3 +234,149 @@ body {
     font-size: 25px;
   }
 }
+
+.class-list--hidden,
+.class-details--hidden {
+  display: none;
+}
+
+.class-details {
+  display: block;
+}
+
+.detail-card {
+  overflow: hidden;
+  border: 1px solid #ead8c9;
+  border-radius: 24px;
+  background: #fffaf4;
+  box-shadow: 0 12px 26px rgba(85, 38, 19, 0.08);
+}
+
+.detail-card__back {
+  margin: 14px 14px 0;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 999px;
+  background: #fff1df;
+  color: #9a4c1f;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.detail-card__media {
+  position: relative;
+  height: 220px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.detail-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 0%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+}
+
+.detail-card__status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #2f6b2f;
+  backdrop-filter: blur(6px);
+}
+
+.detail-card__status--full {
+  color: #a33b28;
+}
+
+.detail-card__body {
+  padding: 18px 16px 20px;
+}
+
+.detail-card__title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 1;
+  color: #2e1f18;
+}
+
+.detail-card__description {
+  margin: 14px 0 0;
+  line-height: 1.55;
+  color: #5f514a;
+}
+
+.detail-card__section {
+  margin-top: 20px;
+}
+
+.detail-card__section-title {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: #2b1d17;
+}
+
+.detail-card__menu {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-card__menu-item {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #fff1df;
+  color: #5a3b2b;
+}
+
+.detail-card__info {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #443630;
+}
+
+.detail-card__info span {
+  font-weight: 700;
+}
+
+.detail-card__note {
+  margin: 0;
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff1df;
+  line-height: 1.5;
+  color: #5a3b2b;
+}
+
+@media (max-width: 520px) {
+  .detail-card__media {
+    height: 200px;
+  }
+
+  .detail-card__title {
+    font-size: 28px;
+  }
+}
