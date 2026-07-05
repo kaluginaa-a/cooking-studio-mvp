@@ -55,10 +55,13 @@ const api = {
            return;
          }
 
-         if (payload.equipmentType === "studio" && slot.freeEquipmentSets <= 0) {
+         if (
+           payload.equipmentType === "studio" &&
+           slot.freeEquipmentSets < payload.participantsCount
+         ) {
            reject({
              code: "EQUIPMENT_NOT_AVAILABLE",
-             message: "Комплекты студии закончились."
+             message: "Недостаточно комплектов студии для выбранного количества участников."
            });
            return;
          }
@@ -88,7 +91,7 @@ const api = {
          slot.freePlaces -= payload.participantsCount;
 
          if (payload.equipmentType === "studio") {
-           slot.freeEquipmentSets -= 1;
+           slot.freeEquipmentSets -= payload.participantsCount;
          }
 
          if (slot.freePlaces === 0) {
