@@ -15,7 +15,7 @@ const mockClassSlots = [
     currency: "RUB",
     freePlaces: 5,
     totalPlaces: 12,
-    freeEquipmentSets: 4,
+    freeEquipmentSets: 5,
     equipmentRentalPrice: 300,
     address: "Кулинарная студия «Шеф-стол», зал 1",
     status: "scheduled",
@@ -57,10 +57,13 @@ const mockClassSlots = [
     currency: "RUB",
     freePlaces: 3,
     totalPlaces: 8,
-    freeEquipmentSets: 2,
+    freeEquipmentSets: 3,
     equipmentRentalPrice: 250,
     address: "Кулинарная студия «Шеф-стол», зал 1",
     status: "scheduled",
     image: "./images/desserts.jpg"
   }
 ];
+
+// Здесь будут храниться записи, созданные через mock API.
+const mockBookings = [];
